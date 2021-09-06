@@ -7,7 +7,7 @@
 	</tr>
 	<tr>
 		<th>Path:</th>
-		<td id="scm_url"><%= repository.url %></td>
+		<td id="scm_url"><%= repository.url.sub(/\/var\/lib/, request.protocol + request.host_with_port) %></td>
 		<td>
 			<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#scm_url">
 				Copy to clipboard
